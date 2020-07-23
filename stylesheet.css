@@ -1,8 +1,24 @@
 .calculator{
 	text-align: center;
-	margin: 0 auto;
-	padding-top: 200px;
+	margin: 100px auto 0 auto;
+	padding: 10px;
 	width: 400px;
+	border-radius: 7px;
+	background-color: white;
+	box-shadow: 0 15px darkgray, 0 16px #000;
+	border: 1px solid black;
+}
+
+.calculator-message{
+	width: 100%;
+	padding: 5px;
+	background-color: #252525;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline-block;
+	text-align: right;
+	height: 30px;
+	margin: 0;
 }
 
 .calculator-screen{
@@ -15,6 +31,7 @@
 	border: none;
 	padding: 0 20px;
 	box-sizing: border-box;
+	margin-bottom: 5px;
 }
 
 .calculator-keys{
@@ -23,9 +40,11 @@
 
 .row{
 	display: flex;
+	justify-content: space-between;
+    margin-bottom: 5px;
 }
 
-button{
+button, .delete{
 	height: 80px;
 	background-color: gray;
 	border: 1px solid black;
@@ -33,17 +52,32 @@ button{
 	color: #fff;
 	width: 25%;
 	outline: none;
+	margin: 0 1px;
+	transition: ease-in-out 0.5s;
 }
 
-button:hover{
+.all-clear{
+	background-color:red;
+}
+
+.all-clear:hover{
+	background-color:darkred;
+}
+
+.row button:active{
+    position: relative;
+    top: 2px;
+}
+
+button:hover, .delete:hover{
 	background-color: darkgray;
 }
 
-.all-clear, .zero-btn{
+.zero-btn {
 	width: 50%;
 }
 
-.operator, .equal-sign{
+.operator, .equal-sign, .persen{
 	background-color: orange;
 }
 
@@ -54,4 +88,11 @@ button:hover{
 .header{
 	font-size: 32px;
 	color: blue;
+}
+
+@media (max-width: 670px ){
+	.calculator{
+		width: 360px;
+		box-sizing: border-box;
+	}
 }

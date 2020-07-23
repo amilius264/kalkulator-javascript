@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kalkulator</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 	<div class="calculator">
 		<div class="header">Kalkulator Javascript</div>
+		<p class="calculator-message">
+			<span>Operator</span>
+		</p>
 		<input type="text" class="calculator-screen" value="0" disabled="">
 		<div class="calculator-keys">
 			<div class="row">
 				<button class="all-clear">AC</button>
+				<button class="delete">&#8592;</button>
 				<button class="persen" value="%">%</button>
 				<button class="operator" value="/">&divide;</button>
 			</div>
@@ -39,7 +44,7 @@
 				<button class="equal-sign">=</button>
 			</div>
 		</div>
-		<div class="footer">&copy; 2020 Amilius Pratama</div>
+		<div class="footer">&copy; 2020 <a href="https://github.com/amilius264/kalkulator-javascript.github.io">Amilius Pratama</a></div>
 	</div>
 <script type="text/javascript" src="script.js"></script>
 </body>

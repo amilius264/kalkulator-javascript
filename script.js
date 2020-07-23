@@ -28,12 +28,14 @@ const inputnum = (number) => {
 }
 
 const operators = document.querySelectorAll('.operator')
+let calculatorMessage = document.querySelector(".calculator-message");
 
 operators.forEach((operator) => {
 	operator.addEventListener("click", (event) => {
 		// console.log('operator')
 		// console.log(event.target.value)
 		inputopt(event.target.value)
+		calculatorMessage.innerHTML = `${event.target.value}`;
 	})
 }) 
 
@@ -73,6 +75,7 @@ const hitung = () => {
 			break
 	}
 	num_skrg = hasil
+	calculatorMessage.innerHTML = `operator`
 	cal_op = ''
 }
 
@@ -85,6 +88,7 @@ clearbtn.addEventListener("click", (event) => {
 })
 
 const hpsall = () => {
+	calculatorMessage.innerHTML = `operator`
 	num_sblm = ''
 	cal_op = ''
 	num_skrg = '0'
@@ -111,4 +115,16 @@ percentage.addEventListener("click", (event) => {
 	// console.log("persen")
 	num_skrg /= 100
 	updatescr(num_skrg)
+})
+
+const del = document.querySelector(".delete")
+
+del.addEventListener("click", (event) => {
+    // console.log(num_skrg.length)
+    if (num_skrg !== "0" && num_skrg.length !== 1) {
+      num_skrg = num_skrg.slice(0, num_skrg.length - 1)
+    } else {
+      num_skrg = "0"
+    }
+    updatescr(num_skrg)
 })
