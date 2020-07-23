@@ -53,7 +53,7 @@ button, .delete{
 	width: 25%;
 	outline: none;
 	margin: 0 1px;
-	transition: ease-in-out 0.5s;
+
 }
 
 .all-clear{
@@ -90,9 +90,8 @@ button:hover, .delete:hover{
 	color: blue;
 }
 
-@media (max-width: 670px ){
+@media (max-width: 7000px ){
 	.calculator{
 		width: 360px;
-		box-sizing: border-box;
 	}
 }
